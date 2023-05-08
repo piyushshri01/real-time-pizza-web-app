@@ -1,0 +1,31 @@
+<section class="login flex">
+    <div class="w-full max-w-xs m-auto bg-indigo-100 rounded p-5">   
+          <header>
+            <img class="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
+          </header>   
+          <form action="/login" method="POST">
+              <% if(messages.error){ %>
+                <span class="text-red-500 text-sm"><%= messages.error %></span>
+              <% } %>
+            <div>
+              <label class="block mb-2 text-indigo-500" for="username">Email</label>
+              <input class="w-full p-2 mb-6 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="email" name="email">
+            </div>
+            <div>
+              <label class="block mb-2 text-indigo-500" for="password">Password</label>
+              <input class="w-full p-2 mb-6 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="password" name="password">
+            </div>
+            <div>          
+              <button class="w-full btn-primary text-white font-bold py-2 px-4 mb-6 rounded" type="submit">Login</button>
+            </div>       
+          </form>  
+          <footer>
+            <a class="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#">Forgot Password?</a>
+            <a class="text-indigo-700 hover:text-pink-700 text-sm float-right" href="/register">Create Account</a>
+            <!-- <div>
+                <span>Don't have an account</span>
+            </div> -->
+            
+          </footer>   
+        </div>
+</section>
